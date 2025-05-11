@@ -91,7 +91,11 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
+<<<<<<< HEAD
 vim.g.have_nerd_font = false
+=======
+vim.g.have_nerd_font = true
+>>>>>>> 6560559 (personalizzazione neovim)
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -179,6 +183,12 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
+<<<<<<< HEAD
+=======
+vim.keymap.set('n', '<leader>ex', ':Explore<CR>', {})
+vim.keymap.set('n', '<leader>lz', ':Lazy<CR>', {})
+vim.keymap.set('n', '<leader>tb', ':tabnew', {})
+>>>>>>> 6560559 (personalizzazione neovim)
 -- TIP: Disable arrow keys in normal mode
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
 -- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
@@ -349,6 +359,20 @@ require('lazy').setup({
   -- you do for a plugin at the top level, you can do for a dependency.
   --
   -- Use the `dependencies` key to specify the dependencies of a particular plugin
+<<<<<<< HEAD
+=======
+  {
+    'nvim-neo-tree/neo-tree.nvim',
+    branch = 'v3.x',
+    vim.keymap.set('n', '<leader>nt', ':Neotree filesystem reveal left<CR>', {}),
+    vim.keymap.set('n', '<leader>nb', ':Neotree buffers reveal float<CR>', {}),
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'nvim-tree/nvim-web-devicons',
+      'MunifTanjim/nui.nvim',
+    },
+  },
+>>>>>>> 6560559 (personalizzazione neovim)
 
   { -- Fuzzy Finder (files, lsp, etc)
     'nvim-telescope/telescope.nvim',
@@ -873,6 +897,7 @@ require('lazy').setup({
     -- change the command in the config to whatever the name of that colorscheme is.
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
+<<<<<<< HEAD
     'folke/tokyonight.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     config = function()
@@ -882,11 +907,21 @@ require('lazy').setup({
           comments = { italic = false }, -- Disable italics in comments
         },
       }
+=======
+    'catppuccin/nvim',
+    priority = 1000, -- Make sure to load this before all the other start plugins.
+    config = function()
+      ---@diagnostic disable-next-line: missing-fields
+>>>>>>> 6560559 (personalizzazione neovim)
 
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
+<<<<<<< HEAD
       vim.cmd.colorscheme 'tokyonight-night'
+=======
+      vim.cmd.colorscheme 'catppuccin'
+>>>>>>> 6560559 (personalizzazione neovim)
     end,
   },
 

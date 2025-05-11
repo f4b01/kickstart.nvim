@@ -4,4 +4,7 @@ test.sh
 nvim
 
 spell/
+<<<<<<< HEAD
 lazy-lock.json
+=======
+>>>>>>> 6560559 (personalizzazione neovim)
